@@ -17,7 +17,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: "Output Management"
+            filename: 'index.html',
+            inject: 'body',
+            template: './index.html'
         })
     ],
     output: {
@@ -38,6 +40,11 @@ module.exports = {
                 use:['file-loader']
             }
         ]
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
     }
 
 }
