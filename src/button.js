@@ -5,7 +5,22 @@ const button = {
             count: 0
         }
     },
-    template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+    props:{
+        text:String,
+        value:{
+            type:Number,
+            default:20
+        },
+        type:{
+            type:String,
+            default: 'test'
+            /*validator:function(value){
+                return ['info','log','erroe'].indexOf(value) !== -1;
+            }*/
+        }
+
+    },
+    template: '<button v-on:click="count++">{{text}}:{{ count }},{{value}}</button>'
 };
 
 export { button };

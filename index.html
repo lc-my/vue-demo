@@ -6,10 +6,14 @@
 </head>
 <body>
 <div id="app">
-    {{message}}
-    <button-counter></button-counter>
-    <button-counter></button-counter>
-    <button-counter></button-counter>
+    <!--<button-counter v-bind="pro"></button-counter>-->
+    <!--<button-counter v-bind:text="title" v-bind:value="2" v-on:click.native="inputClick"></button-counter>-->
+    <!--<base-input v-model="username" v-on:focus.native="inputClick" label="l1" required placeholder="Enter your username"></base-input>
+    <base-input v-model="username" v-on:focus="inputClick" label="l1" required placeholder="Enter your username"></base-input>-->
+    <base-input-2 v-model="username"  v-on:focus.native="inputClick"  required placeholder="Enter your username" v-on:input="inputClick"></base-input-2>
+    <!--<base-input-2 v-model="username" required placeholder="Enter your username" v-on:input="inputClick"></base-input-2>
+    <base-checkbox v-model="check" v-on:change="boxChage"></base-checkbox>-->
+    {{check}}
 </div>
 </body>
 </html>
