@@ -10,10 +10,13 @@
     <!--<button-counter v-bind:text="title" v-bind:value="2" v-on:click.native="inputClick"></button-counter>-->
     <!--<base-input v-model="username" v-on:focus.native="inputClick" label="l1" required placeholder="Enter your username"></base-input>
     <base-input v-model="username" v-on:focus="inputClick" label="l1" required placeholder="Enter your username"></base-input>-->
-    <base-input-2 v-model="username"  v-on:focus.native="inputClick"  required placeholder="Enter your username" v-on:input="inputClick"></base-input-2>
+    <base-input-2 v-model="username" v-on:focus.native="inputClick"  required placeholder="Enter your username" v-on:input="inputClick"></base-input-2>
     <!--<base-input-2 v-model="username" required placeholder="Enter your username" v-on:input="inputClick"></base-input-2>
     <base-checkbox v-model="check" v-on:change="boxChage"></base-checkbox>-->
-    {{check}}
+    <alert-box>this is alert box</alert-box>
+    <render-demo :level="1">hello-world-1</render-demo>
+
+    <render-demo :level="5">hello-world-5</render-demo>
 </div>
 </body>
 </html>
