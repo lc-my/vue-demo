@@ -1,12 +1,17 @@
 <template>
     <div>
-        this bar page
+        this foo2 page
     </div>
 </template>
 
 <script>
     export default {
-        name: "Bar"
+        name: "Foo2",
+        data:function(){
+            return {
+
+            }
+        }
     }
 </script>
 

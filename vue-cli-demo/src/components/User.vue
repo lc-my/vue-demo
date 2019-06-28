@@ -6,7 +6,6 @@
     export default {
         name: "User",
         mounted:function(){
-            console.info(this.$route);
 
         }
     }

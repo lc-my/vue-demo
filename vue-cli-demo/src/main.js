@@ -9,6 +9,12 @@ Vue.config.productionTip = false;
 Vue.use(VueResource);
 
 new Vue({
-    router,
-  render: h => h(App),
+    router:router,
+    render: h => h(App), /** 相当于render:function(createElement){createElement(App)}**/
+    watch: {
+        '$route':function(to, from) {
+            /*console.info(to);
+            console.info(from);*/
+        }
+    }
 }).$mount('#app');

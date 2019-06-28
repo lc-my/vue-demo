@@ -2,13 +2,13 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
    <p>
-       <router-link to="/foo">Go To Foo</router-link>
+       <router-link :to="{name:'foo'}">Go To Foo</router-link>
    </p>
    <p>
        <router-link to="/bar">Go To Bar</router-link>
    </p>
       <p>
-          <router-link to="/user/1">Go To User</router-link>
+          <router-link :to="{name:'user',params:{id:1}}">Go To User</router-link>
       </p>
       <router-view></router-view>
   </div>
@@ -19,6 +19,9 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted:function(){
+      this.$router.push('/admin');
   }
 }
 </script>
