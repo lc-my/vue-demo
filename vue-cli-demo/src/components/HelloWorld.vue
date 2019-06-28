@@ -10,7 +10,8 @@
       <p>
           <router-link :to="{name:'user',params:{id:1}}">Go To User</router-link>
       </p>
-      <router-view></router-view>
+      <router-view class="defalut" />
+      <router-view class="b" name="b" />
   </div>
 </template>
 
@@ -38,6 +39,20 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+}
+
+.hello{
+    position: absolute;
+}
+.defalut{
+    position: relative;
+    background: azure;
+    top: 10px;
+}
+.b{
+  position: relative;
+  background: #42b983;
+    top: 20px;
 }
 a {
   color: #42b983;

@@ -10,12 +10,19 @@ import User from '../components/User'
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+    mode: 'history',
     routes:[
         {
             path:'/foo',
             name:'foo',
-            component:Foo,
-            children:[
+            component:Foo
+        },
+        {
+            path:'/bar',
+            components:{
+                default:Bar,
+                b:Foo
+            },children:[
                 {
                     path:'1',
                     name:'foo1',
@@ -26,13 +33,10 @@ const router = new VueRouter({
                     component:Foo2
                 }
             ]
-        },
-        {
-            path:'/bar',
-            component:Bar
         },{
             path:'/user/:id',
             name:'user',
+            props:true,
             component:User
         },{
             path:'*'

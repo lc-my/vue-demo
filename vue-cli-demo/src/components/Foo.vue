@@ -7,7 +7,7 @@
         <p>
             <button v-on:click="button2Click">点击2</button>
         </p>
-        <router-view></router-view>
+        <router-view />
     </div>
 </template>
 

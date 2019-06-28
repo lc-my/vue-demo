@@ -1,9 +1,10 @@
 <template>
-    <div>User{{ $route.params.id }}</div>
+    <div>User{{ id }}</div>
 </template>
 
 <script>
     export default {
+        props:['id'],
         name: "User",
         mounted:function(){
 
