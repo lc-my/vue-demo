@@ -7,6 +7,9 @@
    <p>
        <router-link to="/bar">Go To Bar</router-link>
    </p>
+      <p>
+          <router-link to="/user/1">Go To User</router-link>
+      </p>
       <router-view></router-view>
   </div>
 </template>
