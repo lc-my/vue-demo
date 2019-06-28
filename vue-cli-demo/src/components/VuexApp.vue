@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import { mapState,mapGetters } from 'vuex'
+    import { mapState,mapGetters,mapMutations,mapActions } from 'vuex'
     export default {
         name: "VuexApp",
         computed:{
@@ -19,12 +19,19 @@
             ...mapGetters({
                 getTodo: 'getTodoById'
             }),
+
         },
         methods:{
-
+            ...mapMutations({
+                add:'increment'
+            }),
+            ...mapActions({
+                add2:'add'
+            }),
             buttonClick:function(){
                 console.info(this.$store.state);
-                this.$store.commit('increment');
+                //this.$store.commit('increment');
+                this.add2(1);
             },
             /*getTodo(){
                 let item =  this.$store.getters.getTodoById(1);
